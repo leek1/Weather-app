@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import {NavBar} from './components/NavBar';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {HashRouter , Route, Routes} from "react-router-dom";
 import {City} from "./weatherAppTypes";
 import {HomePage} from "./pages/HomePage";
 import styled from "@emotion/styled";
@@ -20,7 +20,7 @@ const App = () => {
 
     return (
         <Container>
-            <Router>
+            <HashRouter>
                 <NavBar isMetricUnit={isMetricUnit} setIsMetricUnit={setIsMetricUnit}/>
                 <Error isOpen={isError}/>
                 <Routes>
@@ -29,7 +29,7 @@ const App = () => {
                     <Route path="/favorites" element={< FavoritesPage favorites={favorites} isMetricUnit={isMetricUnit}
                                                                       setIsError={setIsError}/>}/>
                 </Routes>
-            </Router>
+            </HashRouter>
         </Container>
     );
 };
