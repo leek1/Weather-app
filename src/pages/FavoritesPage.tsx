@@ -35,6 +35,7 @@ export const FavoritesPage = ({favorites, isMetricUnit, setIsError}: FavoritesPa
                         setIsError(true);
                     } else {
                         favoritesData.push({favorite: favorites[index], ...data.result})
+                        setIsError(false);
                     }
 
                 });

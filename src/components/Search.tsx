@@ -21,6 +21,7 @@ export const Search = ({setCityBySearch, setIsError}: Props) => {
                     setIsError(true);
                 } else {
                     setLocations(res.result);
+                    setIsError(false);
                 }
             })
         }, 600),
