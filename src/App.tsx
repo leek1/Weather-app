@@ -16,7 +16,7 @@ const App = () => {
 
     const [favorites, setFavorites] = useState<City[]>([]);
     const [isMetricUnit, setIsMetricUnit] = useState<boolean>(true);
-    const [isError, setIsError] = useState<boolean>(true);
+    const [isError, setIsError] = useState<boolean>(false);
 
     return (
         <Container>
